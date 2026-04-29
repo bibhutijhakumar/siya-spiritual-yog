@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 import { 
   Users, 
   Leaf, 
@@ -27,10 +28,11 @@ const IMAGES = {
   insta4: "https://lh3.googleusercontent.com/aida-public/AB6AXuDiSrUluSTFFjTMIKqt0oIZskGdVm8JLqdiRc0GnJbTiNVoAvNkY4rWaawPYhNf9sHO2RYOheW5sh3wXlzEolUOJc2W34I3APdTtAOsORNgqh3zPwtxLtNMm_O94eINKZ5Inonj84b708WdgZRUmBQYJt2Y8MjvVU474QnSHpVjytoxS8qimxsPXzlKRxRQ698ZW0exq_qZSx_v8ZfnpxLZ4QRfdclGNokK2GSAFNdzL_-_AJJbG8tLaLIkoL3HnOTQXE0XE3oX_Ir0"
 };
 export default function HeroRetreat() {
+  const navigate = useNavigate();
   return (
     <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative h-[870px] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[550px] sm:min-h-[650px] md:h-[870px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               alt="Peaceful meditation in nature" 
@@ -46,18 +48,18 @@ export default function HeroRetreat() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative z-10 text-center text-white px-6 max-w-4xl"
+            className="relative z-10 text-center text-white px-4 sm:px-6 max-w-4xl"
           >
-            <h1 className="text-display-xl mb-6">Reconnect. Rebalance. Renew.</h1>
-            <p className="text-body-lg mb-8 text-white/90">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">Reconnect. Rebalance. Renew.</h1>
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-white/90 leading-relaxed">
               Experience a peaceful yoga retreat away from daily stress, designed to restore your inner harmony.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-primary-container text-white font-label-bold px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+              <button className="bg-primary-container text-white font-label-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl shadow-lg hover:scale-105 transition-transform text-sm sm:text-base">
                 Explore Retreats
               </button>
-              <button className="border-2 border-white text-white font-label-bold px-8 py-4 rounded-xl backdrop-blur-sm hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-2">
-                <Play size={18} fill="currentColor" />
+              <button className="border-2 border-white text-white font-label-bold px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl backdrop-blur-sm hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                <Play size={16} fill="currentColor" />
                 Watch Experience
               </button>
             </div>
@@ -65,19 +67,19 @@ export default function HeroRetreat() {
         </section>
 
         {/* Experience Bento Grid */}
-        <section className="py-section px-6 md:px-8 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="bg-tertiary-fixed text-on-tertiary-fixed font-label-bold px-4 py-1 rounded-full uppercase tracking-widest text-[10px]">
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <span className="bg-tertiary-fixed text-on-tertiary-fixed font-label-bold px-4 py-1 rounded-full uppercase tracking-widest text-[9px] sm:text-[10px]">
               Curated Experience
             </span>
-            <h2 className="text-headline-lg mt-4">What You’ll Experience</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4">What You'll Experience</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-6 h-auto md:h-[700px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-6 h-auto md:h-[700px]">
             {/* Daily Yoga */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-2 md:row-span-2 relative rounded-[32px] overflow-hidden group min-h-[400px] md:min-h-0"
+              className="md:col-span-2 md:row-span-2 relative rounded-xl sm:rounded-2xl md:rounded-[32px] overflow-hidden group min-h-[300px] sm:min-h-[350px] md:min-h-0"
             >
               <img 
                 alt="Daily Yoga Session" 
@@ -86,16 +88,16 @@ export default function HeroRetreat() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-              <div className="absolute bottom-8 left-8 text-white pr-8">
-                <h3 className="text-headline-md mb-2">Daily Yoga</h3>
-                <p className="text-body-md text-white/80">Guided sessions for all levels in our sun-drenched pavillion.</p>
+              <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 text-white pr-4 sm:pr-8">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Daily Yoga</h3>
+                <p className="text-xs sm:text-sm md:text-base text-white/80">Guided sessions for all levels in our sun-drenched pavillion.</p>
               </div>
             </motion.div>
 
             {/* Meditation */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="md:col-span-2 relative rounded-[32px] overflow-hidden group min-h-[300px] md:min-h-0"
+              className="md:col-span-2 relative rounded-xl sm:rounded-2xl md:rounded-[32px] overflow-hidden group min-h-[250px] sm:min-h-[300px] md:min-h-0"
             >
               <img 
                 alt="Meditation Session" 
@@ -104,16 +106,16 @@ export default function HeroRetreat() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="text-headline-md mb-2">Meditation</h3>
-                <p className="text-body-md text-white/80">Deep mindfulness practices to quiet the mind.</p>
+              <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 text-white">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2">Meditation</h3>
+                <p className="text-xs sm:text-sm md:text-base text-white/80">Deep mindfulness practices to quiet the mind.</p>
               </div>
             </motion.div>
 
             {/* Nature */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="relative rounded-[32px] overflow-hidden group min-h-[250px] md:min-h-0"
+              className="relative rounded-xl sm:rounded-2xl md:rounded-[32px] overflow-hidden group min-h-[200px] sm:min-h-[250px] md:min-h-0"
             >
               <img 
                 alt="Nature Walks" 
@@ -122,7 +124,7 @@ export default function HeroRetreat() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute bottom-6 left-6 text-white text-xl font-title font-semibold">
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white text-lg sm:text-xl md:text-2xl font-title font-semibold">
                 Nature
               </div>
             </motion.div>
@@ -130,7 +132,7 @@ export default function HeroRetreat() {
             {/* Personal Guidance */}
             <motion.div 
               whileHover={{ y: -5 }}
-              className="relative rounded-[32px] overflow-hidden group min-h-[250px] md:min-h-0"
+              className="relative rounded-xl sm:rounded-2xl md:rounded-[32px] overflow-hidden group min-h-[200px] sm:min-h-[250px] md:min-h-0"
             >
               <img 
                 alt="Personal Guidance" 
@@ -139,7 +141,7 @@ export default function HeroRetreat() {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute bottom-6 left-6 text-white text-xl font-title font-semibold">
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-white text-lg sm:text-xl md:text-2xl font-title font-semibold">
                 Personal Guidance
               </div>
             </motion.div>
@@ -147,9 +149,9 @@ export default function HeroRetreat() {
         </section>
 
         {/* Highlights Section */}
-        <section className="bg-surface-container-low py-section">
-          <div className="max-w-7xl mx-auto px-6 md:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <section className="bg-surface-container-low py-12 sm:py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
               <HighlightCard 
                 icon={<Users className="w-6 h-6 text-primary" />}
                 title="Small Groups"
@@ -173,14 +175,14 @@ export default function HeroRetreat() {
         </section>
 
         {/* Schedule Section */}
-        <section className="py-section px-6 md:px-8 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
-            <div className="md:w-1/3">
-              <h2 className="text-headline-lg mb-6">A Day of Rituals</h2>
-              <p className="text-body-lg text-on-surface-variant mb-8">
+        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-start">
+            <div className="md:w-1/3 w-full">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">A Day of Rituals</h2>
+              <p className="text-sm sm:text-base md:text-lg text-on-surface-variant mb-6 sm:mb-8">
                 Our days are structured to follow the natural rhythm of the sun, balancing active movement with profound stillness.
               </p>
-              <div className="rounded-[32px] overflow-hidden shadow-xl aspect-square md:aspect-auto">
+              <div className="rounded-lg sm:rounded-2xl md:rounded-[32px] overflow-hidden shadow-xl aspect-square md:aspect-auto">
                 <img 
                   alt="Healthy Meal" 
                   className="w-full h-full object-cover" 
@@ -190,7 +192,7 @@ export default function HeroRetreat() {
               </div>
             </div>
             
-            <div className="md:w-2/3 w-full space-y-4">
+            <div className="md:w-2/3 w-full space-y-3 sm:space-y-4">
               <ScheduleItem time="07:00" title="Morning Meditation" description="Awaken the senses with guided pranayama." />
               <ScheduleItem time="08:30" title="Morning Yoga Flow" description="Vinyasa session to energize the body." />
               <ScheduleItem time="11:00" title="Healthy Nutritious Meals" description="Organic farm-to-table brunch experience." />
@@ -256,7 +258,10 @@ export default function HeroRetreat() {
             <p className="text-body-lg text-on-surface-variant mb-12">
               Limited spaces available for our upcoming seasonal retreats. Secure your spot in paradise today.
             </p>
-            <button className="bg-primary text-on-primary font-label-bold px-12 py-5 rounded-2xl text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/20 cursor-pointer">
+            <button
+              onClick={() => navigate('/contact')}
+              className="bg-primary text-white font-label-bold px-12 py-5 rounded-2xl text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/20 cursor-pointer"
+            >
               Book your retreat now
             </button>
           </motion.div>

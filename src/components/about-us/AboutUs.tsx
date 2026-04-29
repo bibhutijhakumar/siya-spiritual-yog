@@ -15,9 +15,9 @@ const IMAGES = {
 };
 export default function AboutUs() {
   return (
-    <div className="pt-20">
+    < div className="pt-20">
      {/* Hero Section */}
-      <header className="relative min-h-[85vh] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+      <header className="relative min-h-[500px] sm:min-h-[650px] md:min-h-[85vh] lg:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden pt-12 sm:pt-16 md:pt-0">
         <div className="absolute inset-0 z-0">
           <img 
             src={IMAGES.hero} 
@@ -27,30 +27,30 @@ export default function AboutUs() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
         </div>
         
-        <div className="container-custom relative z-10 text-white">
+        <div className="container-custom relative z-10 text-white px-4 sm:px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-3xl"
           >
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-extrabold mb-4 sm:mb-6 leading-tight">
               About Siya
             </h1>
-            <p className="text-lg md:text-xl font-light mb-10 opacity-90 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-light mb-6 sm:mb-10 opacity-90 leading-relaxed max-w-2xl">
               Discover Your Path to Holistic Wellness through our curated experiences designed to rejuvenate your mind, body, and spirit.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary shadow-[0_32px_64px_-16px_rgba(176,47,0,0.2)]">Explore Our Journey</button>
-              <button className="btn-white">View Schedule</button>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <button className="btn-primary shadow-[0_32px_64px_-16px_rgba(176,47,0,0.2)] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">Explore Our Journey</button>
+              <button className="btn-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">View Schedule</button>
             </div>
           </motion.div>
         </div>
       </header>
 
       {/* Breadcrumb */}
-      <div className="bg-white py-6 border-b border-gray-100">
-        <div className="container-custom flex items-center gap-3 text-xs md:text-sm font-medium text-slate-600/60">
+      <div className="bg-white py-4 sm:py-6 border-b border-gray-100">
+        <div className="container-custom flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-medium text-slate-600/60 px-4 sm:px-6 md:px-8">
           <a href="#" className="hover:text-orange-800 transition-colors">Home</a>
           <ChevronRight size={14} />
           <a href="#" className="hover:text-orange-800 transition-colors">About Us</a>
@@ -60,16 +60,16 @@ export default function AboutUs() {
       </div>
 
       {/* Introduction */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container-custom grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
+      <section className="py-12 sm:py-24 md:py-32 bg-white">
+        <div className="container-custom grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-24 items-center px-4 sm:px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-gray-900">Welcome to <br />SIYA SPIRITUAL YOG</h2>
-            <div className="space-y-6 text-gray-600 leading-relaxed">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-gray-900">Welcome to <br />SIYA SPIRITUAL YOG</h2>
+            <div className="space-y-4 sm:space-y-6 text-gray-600 leading-relaxed text-sm sm:text-base">
               <p>
                 Founded on the principles of ancient wisdom and modern therapeutic science, SIYA has been a sanctuary for those seeking restoration since 2015. Our journey began with a single vision: to create a space where the soul finds its rhythm and the body finds its strength.
               </p>
@@ -86,20 +86,20 @@ export default function AboutUs() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
               <img src={IMAGES.intro} alt="Yoga Studio" className="w-full h-full object-cover" />
             </div>
-            <div className="absolute -top-10 -left-10 bg-orange-600 text-white p-8 rounded-2xl shadow-2xl hidden md:block">
-              <div className="text-4xl font-bold mb-1">2015</div>
-              <div className="text-xs uppercase tracking-widest font-bold opacity-80">Established</div>
+            <div className="absolute -top-6 sm:-top-10 -left-6 sm:-left-10 bg-orange-600 text-white p-4 sm:p-8 rounded-lg sm:rounded-2xl shadow-2xl hidden md:block">
+              <div className="text-2xl sm:text-4xl font-bold mb-1">2015</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-widest font-bold opacity-80">Established</div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Statistics */}
-      <section className="py-20 bg-surface-container border-y border-orange-50">
-        <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-surface-container border-y border-orange-50">
+        <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8">
           {[
             { icon: <Hotel className="text-orange-800" />, label: "25+", sub: "Luxurious Rooms" },
             { icon: <Flower2 className="text-orange-800" />, label: "5", sub: "Therapy Rooms" },
@@ -112,13 +112,13 @@ export default function AboutUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="flex flex-col items-center text-center gap-4"
+              className="flex flex-col items-center text-center gap-3 sm:gap-4"
             >
-              <div className="w-12 h-12 flex items-center justify-center bg-white rounded-xl shadow-sm">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-white rounded-lg sm:rounded-xl shadow-sm">
                 {stat.icon}
               </div>
               <div>
-                <div className="text-3xl font-bold text-gray-900 mb-1 font-display">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 font-display">{stat.label}</div>
                 <div className="text-xs uppercase tracking-widest font-bold text-slate-600/60">{stat.sub}</div>
               </div>
             </motion.div>
@@ -127,10 +127,10 @@ export default function AboutUs() {
       </section>
 
       {/* Gallery */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container-custom">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-center text-gray-900">Our Beautiful Retreat</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-12 sm:py-24 md:py-32 bg-white">
+        <div className="container-custom px-4 sm:px-6 md:px-8">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 text-center text-gray-900">Our Beautiful Retreat</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {[IMAGES.pool, IMAGES.room, IMAGES.dining].map((img, idx) => (
               <motion.div
                 key={idx}
@@ -139,7 +139,7 @@ export default function AboutUs() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] bg-gray-100 group"
+                className="rounded-lg sm:rounded-2xl overflow-hidden shadow-lg aspect-[4/5] bg-gray-100 group"
               >
                 <img src={img} alt={`Retreat Gallery ${idx}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </motion.div>
