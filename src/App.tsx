@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Therapy from "./components/therapy/Therapy";
 import Retreats from "./components/retreats/Retreats";
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/retreats" element={<Retreats />} />
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Therapy />} /> {/* Default to therapy */}
+          <Route path="/" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
     </Router>
