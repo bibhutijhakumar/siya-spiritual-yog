@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    font-family: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #f7f9fb;
+    color: #191c1e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #b02f00;
+    color: #ffffff;
+  }
+
+  ::-moz-selection {
+    background-color: #b02f00;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-display-xl {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .text-headline-lg {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: 2.25rem;
+    line-height: 1.05;
+    font-weight: 700;
+  }
+
+  .text-headline-md {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #565e74;
+  }
+
+  .text-body-md {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .bg-background {
+    background-color: #f7f9fb;
+  }
+
+  .bg-surface {
+    background-color: #f7f9fb;
+  }
+
+  .bg-surface-container {
+    background-color: #eceef0;
+  }
+
+  .bg-surface-container-high {
+    background-color: #e6e8ea;
+  }
+
+  .bg-surface-container-low {
+    background-color: #f2f4f6;
+  }
+
+  .bg-primary {
+    background-color: #b02f00;
+  }
+
+  .bg-primary-container {
+    background-color: #ff5722;
+  }
+
+  .text-primary {
+    color: #b02f00;
+  }
+
+  .text-secondary {
+    color: #565e74;
+  }
+
+  .text-on-surface {
+    color: #191c1e;
+  }
+
+  .text-on-surface-variant {
+    color: #5b6272;
+  }
+
+  .border-outline-variant {
+    border-color: #e4beb4;
+  }
+
+  .font-display {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .py-spacing-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  .btn-primary {
+    background-color: #b02f00;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 24px 40px -16px rgba(176, 47, 0, 0.25);
+  }
+
+  .btn-primary:hover {
+    background-color: rgba(176, 47, 0, 0.9);
+  }
+
+  .btn-white {
+    background-color: white;
+    color: #b02f00;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border: 2px solid #b02f00;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 24px 40px -16px rgba(0, 0, 0, 0.12);
+  }
+
+  .btn-white:hover {
+    background-color: #fff4ef;
+  }
+}
