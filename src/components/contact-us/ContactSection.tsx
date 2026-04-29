@@ -204,19 +204,35 @@ export default function ContactSection() {
             <div className="grid gap-4 sm:gap-6">
               {CONTACT_INFO.map((item) => {
                 const Icon = icons[item.icon as keyof typeof icons];
+                const isLink = !!(item as any).href;
+                const CardWrapper = isLink ? 'a' : 'div';
+                const linkProps = isLink
+                  ? {
+                      href: (item as any).href,
+                      target: '_blank',
+                      rel: 'noopener noreferrer',
+                    }
+                  : {};
                 return (
-                  <div
+                  <CardWrapper
                     key={item.title}
-                    className="flex items-start gap-4 p-6 rounded-2xl bg-surface-container-low border border-outline-variant/30"
+                    {...linkProps}
+                    className={`flex items-start gap-4 p-6 rounded-2xl bg-surface-container-low border border-outline-variant/30 transition-all ${
+                      isLink
+                        ? 'hover:border-pink-400/60 hover:shadow-md hover:shadow-pink-100 cursor-pointer group'
+                        : ''
+                    }`}
                   >
-                    <div className="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+                    <div className={`w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0 transition-colors ${isLink ? 'group-hover:bg-pink-100 group-hover:text-pink-600' : ''}`}>
                       {Icon && <Icon size={20} />}
                     </div>
                     <div>
                       <h4 className="font-bold text-on-surface text-sm uppercase tracking-wider">{item.title}</h4>
-                      <p className="text-on-surface-variant">{item.value}</p>
+                      <p className={`transition-colors whitespace-pre-line ${isLink ? 'text-on-surface-variant group-hover:text-pink-600' : 'text-on-surface-variant'}`}>
+                        {item.value}
+                      </p>
                     </div>
-                  </div>
+                  </CardWrapper>
                 );
               })}
             </div>

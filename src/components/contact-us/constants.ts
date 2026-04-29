@@ -14,7 +14,7 @@ export const CONTACT_INFO = [
   {
     icon: 'Phone',
     title: 'Phone',
-    value: '+91 9711058777',
+    value: '+91 7678208848 \n+91 9711058777 \n+91 9711109674',
   },
   {
     icon: 'Mail',
@@ -25,6 +25,7 @@ export const CONTACT_INFO = [
     icon: 'Instagram',
     title: 'Instagram',
     value: '@siya_spiritual_yog',
+    href: 'https://www.instagram.com/siyaspiritualyog/',
   },
 ];
 
