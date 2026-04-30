@@ -33,7 +33,7 @@ const areas = [
 
 export default function AreasSupport() {
   return (
-    <section className="py-12 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <section className="py-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
       <div className="text-center mb-8 sm:mb-12 md:mb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Areas We Support</h2>
         <div className="h-1 sm:h-1.5 w-16 sm:w-20 bg-orange-800 mx-auto rounded-full" />

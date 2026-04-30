@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function CTASection() {
   return (
-    <section className="py-spacing-section px-4 sm:px-6 md:px-8 bg-white">
+    <section className="py-6 px-4 sm:px-6 md:px-8 bg-white">
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}

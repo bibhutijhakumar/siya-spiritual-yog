@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import whatsappImg from "../assets/images/whatsapp.png";
 
 // WhatsApp number — country code ke saath, bina + ya spaces ke
-const WHATSAPP_NUMBER = "919711058777";
+const WHATSAPP_NUMBER = "917678208848";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export default function Footer() {
@@ -71,11 +71,6 @@ export default function Footer() {
                 siyajha432@gmail.com
               </a>
             </li>
-            {/* <li>
-              <a href="tel:+917678208848" className="hover:text-orange-800 transition-colors">
-                +91 7678208848
-              </a>
-            </li> */}
             <li>
               <a
                 href={WHATSAPP_LINK}

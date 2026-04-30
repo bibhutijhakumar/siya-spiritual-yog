@@ -26,7 +26,7 @@ const steps = [
 
 export default function HealingProcess() {
   return (
-    <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 text-center bg-white overflow-hidden">
+    <section className="py-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 text-center bg-white overflow-hidden">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16 md:mb-20">Your Healing Process</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 relative">

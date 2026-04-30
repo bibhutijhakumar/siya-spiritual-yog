@@ -182,7 +182,7 @@ export default function ContactSection() {
         )}
       </AnimatePresence>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-24 md:py-32">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 md:gap-16">
 
           {/* Left side: Details */}

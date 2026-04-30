@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function ScientificApproach() {
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-slate-50/30 overflow-hidden">
+    <section className="py-6 bg-slate-50/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -30 }}

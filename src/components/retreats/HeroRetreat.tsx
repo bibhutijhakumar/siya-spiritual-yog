@@ -67,7 +67,7 @@ export default function HeroRetreat() {
         </section>
 
         {/* Experience Bento Grid */}
-        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+        <section className="py-6 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <span className="bg-tertiary-fixed text-on-tertiary-fixed font-label-bold px-4 py-1 rounded-full uppercase tracking-widest text-[9px] sm:text-[10px]">
               Curated Experience
@@ -149,7 +149,7 @@ export default function HeroRetreat() {
         </section>
 
         {/* Highlights Section */}
-        <section className="bg-surface-container-low py-12 sm:py-16 md:py-20">
+        <section className="bg-surface-container-low py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
               <HighlightCard 
@@ -175,7 +175,7 @@ export default function HeroRetreat() {
         </section>
 
         {/* Schedule Section */}
-        <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
+        <section className="py-6 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-start">
             <div className="md:w-1/3 w-full">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">A Day of Rituals</h2>
@@ -203,7 +203,7 @@ export default function HeroRetreat() {
         </section>
 
         {/* Path to Transformation */}
-        <section className="py-section bg-primary text-on-primary overflow-hidden">
+        <section className="py-6 bg-primary text-on-primary overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 md:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 items-center">
               <motion.div 
@@ -248,7 +248,7 @@ export default function HeroRetreat() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-section px-6 md:px-8 text-center max-w-4xl mx-auto">
+        <section className="py-6 px-6 md:px-8 text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

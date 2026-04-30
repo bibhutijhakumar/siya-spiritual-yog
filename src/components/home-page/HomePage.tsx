@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {
   CheckCircle2,
@@ -24,7 +25,6 @@ import {
   Search,
   Link
 } from "lucide-react";
-import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 import homeBannerImg from "../../assets/images/home-banner.png";
@@ -124,12 +124,12 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative z-20 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
+      <section className="relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto bg-white py-8 sm:py-12 md:py-16 rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center"
+          className="container-custom bg-white py-8 sm:py-12 md:py-16 rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 text-center"
         >
           {[
             { value: "5+", label: "Years Experience" },
@@ -146,8 +146,8 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 sm:py-16 md:py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+      <section id="about" className="overflow-hidden">
+        <div className="container-custom grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -213,8 +213,8 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us (Bento Grid) */}
-      <section className="py-12 sm:py-16 md:py-20 bg-white/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <section className="bg-white/50">
+        <div className="container-custom">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Why Choose SIYA SPIRITUAL YOG</h2>
             <div className="w-16 sm:w-20 h-1 sm:h-1.5 bg-orange-600 mx-auto rounded-full" />
@@ -284,8 +284,8 @@ export default function HomePage() {
       </section>
 
       {/* Programs Section */}
-      <section id="programs" className="py-12 sm:py-16 md:py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <section id="programs" className="bg-slate-50">
+        <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16 gap-6">
             <div className="max-w-xl">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Our Programs</h2>
@@ -333,8 +333,8 @@ export default function HomePage() {
       </section>
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-20 items-center">
+      <section id="philosophy" className="bg-white relative overflow-hidden">
+        <div className="container-custom grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-20 items-center">
           <div className="relative z-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">More Than Just Yoga</h2>
             <div className="border-l-4 border-orange-600 pl-6 sm:pl-8 mb-8 sm:mb-10">
@@ -381,10 +381,10 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-center pt-10">Stories of Transformation</h2>
-          <div className="grid md:grid-cols-3 gap-10">
+      <section className="bg-white">
+        <div className="container-custom">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Stories of Transformation</h2>
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {[
               { name: "Ananya M.", role: "Parent", text: "The kids yoga classes are incredible. My son has developed so much focus and body awareness. Siya is patient and professional.", initials: "AM" },
               { name: "Rajesh S.", role: "General Student", text: "As a senior, I was worried about my joints. The customized sessions here have significantly improved my flexibility and range of motion.", initials: "RS" },
@@ -417,25 +417,27 @@ export default function HomePage() {
       </section>
 
       {/* Social Section */}
-      <section className="py-10 bg-white border-y border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="bg-white border-y border-gray-100">
+        <div className="container-custom text-center">
           <h2 className="text-4xl font-bold mb-8">Follow Our Journey</h2>
           <p className="text-xl text-secondary mb-12">Connect with our community and get daily wellness tips.</p>
           <motion.a
-            href="#"
+            href="https://www.instagram.com/siyaspiritualyog/"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center gap-3 bg-gray-900 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl shadow-gray-200 hover:bg-gray-800 transition-all"
           >
             <Instagram className="w-6 h-6" />
-            Follow us on Instagram @siya_spiritual_yog
+            Follow us on Instagram @siyaspiritualyog
           </motion.a>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="">
+        <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
