@@ -4,18 +4,18 @@
  */
 
 import { motion } from "motion/react";
-import { 
-  CheckCircle2, 
-  Baby, 
-  ChevronRight, 
-  ArrowRight, 
-  Star, 
-  Instagram, 
-  Mail, 
-  MapPin, 
-  Users, 
-  Heart, 
-  Brain, 
+import {
+  CheckCircle2,
+  Baby,
+  ChevronRight,
+  ArrowRight,
+  Star,
+  Instagram,
+  Mail,
+  MapPin,
+  Users,
+  Heart,
+  Brain,
   Wind,
   ShieldCheck,
   Stethoscope,
@@ -28,7 +28,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 import homeBannerImg from "../../assets/images/home-banner.png";
-import siyajha from "../../assets/images/siya1.png";
+import siyajha from "../../assets/images/siya-amity-2.png";
 import siyalogo from "../../assets/images/logo.png";
 
 
@@ -40,7 +40,7 @@ const IMAGES = {
   logo: siyalogo,
   homebanner: homeBannerImg,
   hero: "https://lh3.googleusercontent.com/aida-public/AB6AXuDbSW5URfBQgQqVo9k2pmAo_9Ny782bBKp9QzT-KXwVv8uT8yWuEPgrhxQGcmIDP66AA2byRCQFFZNe9SWXmB89JpE7j1QBueZO-nofr6BAdrV2ZTTEVWRCi2_TqpAhWNkSBr0g5qKYIiyqrWukyjicwvreDkzAz8-VC1x6gEPaG4fJVwLr-qSNItbTbfSwwNneQd68XbHHM2T-3GIQkW0ay0jM3nuZK_ztTNXe9yV3OAALvFqnWsEcdd1j9UwfwqwsQNZt1ClTVef8",
-  siyaface: siyajha,
+  siyayog1: siyajha,
   bento1: "https://lh3.googleusercontent.com/aida-public/AB6AXuAdeA47u_oZqSsQPYqJTvE2c1OYsostQ63CCzgotD6aBorGkqNAiDzS8ZM50usDhVgm8JljM7vuXQkZXvSs98oW9QZOBGlosCB12WSDlDWfrEjYI35ka4L1toxHVWA89HlZU5_KKc_kfF_NUfANzZLaV5OR78vZi_xszZ7PxD4Zb5GUTVoe9RT1wuYUTw9MOk8kEU1vlbDhCJEicEchty9cTCXHcXTmEGfzPPCYi_QtzcQZ2TIggF4F1gcUjsijVR-8IBm_8bLAM3wi",
   bento2: "https://lh3.googleusercontent.com/aida-public/AB6AXuBUnarooy7YdZagBngyohKaDO7A2TpsSybv7B_4ixnGHgF21sQWVs4DIs0L_svSsW3y1pm1QYxpnF4aBJqteakdSiuvMXNowgQYBM8Objl8TU6wpH17y_EYKD9nb3RJ_-nEvUCWc73OOAWaWVbkF03ir8DWGVZFgGH1KzyHR2oH3nakWEbpJP2Joob8-qfPiJF_xoVUlK3YF0qdFeiL4NI5xbGv8Wu-NqazUHS1mTV7ANbArb4MONnlSppQNQRwhSbmaI_A0czCqFSp",
   program1: "https://lh3.googleusercontent.com/aida-public/AB6AXuB4Q8hzD1r7ZD5EvXQBSXpd6AJ9jDKHAm8dJk9LfncuCBRzTfz1XZlNOPHd_ZBfS3tXGcdR0lbcp_Pad_OgBywKAccG75kFNsj_PEr584tbXMkj7m1vevAqqJrY7gRTkHmI4szB6D05yuwxqxmp9T7cFphgswiukEa8lN6W7XP-QRe9UQvER4ndNTdBptUAHSdrWily8J3CIMKGvPUWDicC0T37SdXxlqsgetpBibFq6K33SZicisFfhk9E4aqHSsy1xqE_IsizLhBu",
@@ -66,66 +66,66 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-surface selection:bg-primary selection:text-white">
-     
+
 
       {/* Hero Section */}
       {/* Hero Section */}
-<section id="home" className="relative min-h-[550px] sm:min-h-[650px] md:min-h-[90vh] flex items-center overflow-hidden pb-10 sm:pb-16 md:pb-20 pt-20 sm:pt-24 md:pt-20">
+      <section id="home" className="relative min-h-[550px] sm:min-h-[650px] md:min-h-[90vh] flex items-center overflow-hidden pb-10 sm:pb-16 md:pb-20 pt-20 sm:pt-24 md:pt-20">
 
-  {/* Background */}
-  <div className="absolute inset-0 z-0">
-    <img 
-      src={IMAGES.homebanner} 
-      alt="Yoga Practice" 
-      className="w-full h-full object-cover"
-      referrerPolicy="no-referrer"
-    />
-  </div>
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={IMAGES.homebanner}
+            alt="Yoga Practice"
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </div>
 
-  {/* MOBILE OVERLAY */}
-  <div className="absolute inset-0 bg-white/80 md:hidden"></div>
+        {/* MOBILE OVERLAY */}
+        <div className="absolute inset-0 bg-white/80 md:hidden"></div>
 
-  {/* Content */}
-  <div className="grid grid-cols-1 md:grid-cols-2 items-center px-4 sm:px-6 md:px-8 relative z-10 w-full max-w-7xl mx-auto">
+        {/* Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center px-4 sm:px-6 md:px-8 relative z-10 w-full max-w-7xl mx-auto">
 
-    <motion.div 
-      initial={{ opacity: 0, x: -50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="max-w-md items-center text-center md:text-left flex flex-col gap-4 sm:gap-6"
-    >
-      
-      {/* LOGO (hidden on mobile) */}
-      <img 
-        src={IMAGES.logo} 
-        alt="Siya Logo" 
-        className="hidden md:block w-auto h-56 object-contain"
-        referrerPolicy="no-referrer"
-      />
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-md items-center text-center md:text-left flex flex-col gap-4 sm:gap-6"
+          >
 
-      {/* TEXT */}
-      <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed">
-        Certified yoga guidance designed to help you build strength, improve flexibility, and achieve inner peace — for all age groups.
-      </p>
+            {/* LOGO (hidden on mobile) */}
+            <img
+              src={IMAGES.logo}
+              alt="Siya Logo"
+              className="hidden md:block w-auto h-56 object-contain"
+              referrerPolicy="no-referrer"
+            />
 
-      {/* BUTTONS */}
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start w-full sm:w-auto">
-        <button onClick={() => navigate('/contact')} className="bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:brightness-110 transition-all active:scale-95 w-full sm:w-auto">
-          Start Your Journey
-        </button>
+            {/* TEXT */}
+            <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed">
+              Certified yoga guidance designed to help you build strength, improve flexibility, and achieve inner peace — for all age groups.
+            </p>
 
-        <button onClick={() => navigate('/contact')} className="bg-white border-2 border-orange-600 text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-orange-50 transition-all active:scale-95 w-full sm:w-auto">
-          Book a Demo Class
-        </button>
-      </div>
+            {/* BUTTONS */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start w-full sm:w-auto">
+              <button onClick={() => navigate('/contact')} className="bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:brightness-110 transition-all active:scale-95 w-full sm:w-auto">
+                Start Your Journey
+              </button>
 
-    </motion.div>
-  </div>
-</section>
+              <button onClick={() => navigate('/contact')} className="bg-white border-2 border-orange-600 text-orange-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-orange-50 transition-all active:scale-95 w-full sm:w-auto">
+                Book a Demo Class
+              </button>
+            </div>
+
+          </motion.div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="relative z-20 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -148,21 +148,21 @@ export default function HomePage() {
       {/* About Section */}
       <section id="about" className="py-12 sm:py-16 md:py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative"
           >
             <div className="aspect-[4/5] rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-xl">
-              <img 
-                src={IMAGES.siyaface} 
-                alt="Siya Jha" 
-                className="w-full h-full object-cover"
+              <img
+                src={IMAGES.siyayog1}
+                alt="Siya Jha"
+                className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <motion.div 
+            <motion.div
               className="absolute -bottom-4 left-2 bg-orange-700 text-white p-4 sm:p-6 md:p-8 rounded-lg sm:rounded-2xl max-w-xs shadow-xl z-10"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -188,26 +188,26 @@ export default function HomePage() {
               With over 5 years of experience, we specialize in curating transformative sessions for diverse age groups, from energetic children to focused adults and active senior citizens.
             </p>
             <div className="w-full">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 w-full">
-    
-    <div className="p-4 sm:p-6 md:p-8 bg-orange-50 rounded-lg sm:rounded-xl shadow-sm border-t-4 border-orange-400">
-      <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-orange-900">Kids Yoga</h3>
-      <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
-        Playful poses and storytelling designed to improve focus, confidence, and flexibility for young minds.
-      </p>
-      <button className="text-sm sm:text-base text-orange-700 font-semibold hover:underline">Explore Program →</button>
-    </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 w-full">
 
-    <div className="p-4 sm:p-6 md:p-8 bg-blue-50 rounded-lg sm:rounded-xl shadow-sm border-t-4 border-blue-400">
-      <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-blue-900">Senior Wellness</h3>
-      <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
-        Gentle movements and breathing techniques tailored to enhance mobility, balance, and joint health.
-      </p>
-      <button className="text-sm sm:text-base text-blue-700 font-semibold hover:underline">View Schedule →</button>
-    </div>
+                <div className="p-4 sm:p-6 md:p-8 bg-orange-50 rounded-lg sm:rounded-xl shadow-sm border-t-4 border-orange-400">
+                  <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-orange-900">Kids Yoga</h3>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                    Playful poses and storytelling designed to improve focus, confidence, and flexibility for young minds.
+                  </p>
+                  <button className="text-sm sm:text-base text-orange-700 font-semibold hover:underline">Explore Program →</button>
+                </div>
 
-  </div>
-</div>
+                <div className="p-4 sm:p-6 md:p-8 bg-blue-50 rounded-lg sm:rounded-xl shadow-sm border-t-4 border-blue-400">
+                  <h3 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-blue-900">Senior Wellness</h3>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                    Gentle movements and breathing techniques tailored to enhance mobility, balance, and joint health.
+                  </p>
+                  <button className="text-sm sm:text-base text-blue-700 font-semibold hover:underline">View Schedule →</button>
+                </div>
+
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -219,9 +219,9 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Why Choose SIYA SPIRITUAL YOG</h2>
             <div className="w-16 sm:w-20 h-1 sm:h-1.5 bg-orange-600 mx-auto rounded-full" />
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               className="col-span-1 lg:col-span-8 bg-white p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center"
             >
@@ -237,7 +237,7 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               className="col-span-1 lg:col-span-4 bg-orange-600 text-white p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl shadow-lg flex flex-col justify-between"
             >
@@ -253,7 +253,7 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               className="col-span-1 lg:col-span-4 bg-amber-100 text-orange-700 p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl shadow-lg"
             >
@@ -264,7 +264,7 @@ export default function HomePage() {
               </p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               whileHover={{ y: -5 }}
               className="col-span-1 lg:col-span-8 bg-white p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 items-center"
             >
@@ -303,7 +303,7 @@ export default function HomePage() {
               { title: "Prenatal Yoga", desc: "Gentle, supportive movements designed to nurture both mother and baby throughout the pregnancy.", img: IMAGES.program3 },
               { title: "Meditation", desc: "Master the art of Pranayama and mindful meditation to calm the nervous system and clear the mind.", img: IMAGES.program4 }
             ].map((program, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -361,7 +361,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <motion.div 
+            <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -390,7 +390,7 @@ export default function HomePage() {
               { name: "Rajesh S.", role: "General Student", text: "As a senior, I was worried about my joints. The customized sessions here have significantly improved my flexibility and range of motion.", initials: "RS" },
               { name: "Leila K.", role: "Prenatal Student", text: "Siya's prenatal yoga sessions were my anchor during pregnancy. She understands the body so well and provides such a safe space.", initials: "LK" }
             ].map((t, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
                 className="p-10 bg-surface rounded-3xl border border-gray-100 flex flex-col justify-between h-full"
@@ -421,7 +421,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-8">Follow Our Journey</h2>
           <p className="text-xl text-secondary mb-12">Connect with our community and get daily wellness tips.</p>
-          <motion.a 
+          <motion.a
             href="#"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -436,7 +436,7 @@ export default function HomePage() {
       {/* Final CTA */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

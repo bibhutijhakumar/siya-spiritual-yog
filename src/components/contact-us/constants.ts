@@ -24,7 +24,7 @@ export const CONTACT_INFO = [
   {
     icon: 'Instagram',
     title: 'Instagram',
-    value: '@siya_spiritual_yog',
+    value: '@siyaspiritualyog',
     href: 'https://www.instagram.com/siyaspiritualyog/',
   },
 ];
