@@ -24,6 +24,7 @@ export default function Navbar() {
         <Link 
           to="/home" 
           className="flex-shrink-0"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <img className="h-12 sm:h-14 w-auto object-cover" src={IMAGES.logo} alt="Siya Spiritual Yog Logo" />
         </Link>
